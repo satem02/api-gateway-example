@@ -1,0 +1,29 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/{all}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7001
+                }
+            ],
+            "UpstreamPathTemplate": "/first-api/{all}"
+        },
+        {
+            "DownstreamPathTemplate": "/api/{all}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7002
+                }
+            ],
+            "UpstreamPathTemplate": "/second-api/{all}"
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7000"
+    }
+}
