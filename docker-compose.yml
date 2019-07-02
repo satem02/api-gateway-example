@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+
+  firstapi:
+    container_name: "firstapi"
+    build:
+      context: ./src
+      dockerfile: FirstApi/Dockerfile
+    ports:
+     - $FIRST_API_PORT:80
+    environment: 
+     - ASPNETCORE_ENVIRONMENT=Production
+
+  secondapi:
+    container_name: "secondapi"
+    build:
+      context: ./src
+      dockerfile: SecondApi/Dockerfile
+    ports:
+     - $SECOND_API_PORT:80
+    environment: 
+     - ASPNETCORE_ENVIRONMENT=Production
+
+  apigateway:
+    container_name: "apigateway"
+    build:
+      context: ./src
+      dockerfile: GatewayApi/Dockerfile
+    ports:
+     - $APIGATEWAY_PORT:80
+    environment: 
+     - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+     - firstapi
+     - secondapi

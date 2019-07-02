@@ -6,7 +6,7 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 7001
+                    "Port": 80
                 }
             ],
             "UpstreamPathTemplate": "/first-api/{all}"
@@ -17,13 +17,11 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 7002
+                    "Port": 80
                 }
             ],
             "UpstreamPathTemplate": "/second-api/{all}"
         }
     ],
-    "GlobalConfiguration": {
-        "BaseUrl": "https://localhost:7000"
-    }
+    "GlobalConfiguration": {}
 }
