@@ -3,6 +3,8 @@ ASP.NET Core </br>
 Microservices </br>
 Api-Gateway (ocelot)</br>
 vscode</br>
+docker </br>
+docker-compose</br>
 
 1 - git clone https://github.com/satem02/api-gateway-example.git  </br> 
 2 - cd api-gateway-example</br>
