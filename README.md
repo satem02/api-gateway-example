@@ -4,9 +4,9 @@ Microservices </br>
 Api-Gateway (ocelot)</br>
 vscode</br>
 
-1 - git clone https://github.com/satem02/api-gateway-example.git   
-2 - cd api-gateway-example
-3 - docker-compose -f "docker-compose.yml" up -d --build
+1 - git clone https://github.com/satem02/api-gateway-example.git  </br> 
+2 - cd api-gateway-example</br>
+3 - docker-compose -f "docker-compose.yml" up -d --build</br>
 
 
 i make to call an api gateway by creating two api at simple level.</br>
